@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="578.0" prefWidth="891.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controlleruser.ControllerUser">
+   <children>
+      <VBox layoutX="59.0" layoutY="173.0" prefHeight="300.0" prefWidth="300.0" spacing="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="110.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="tName" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="tDateOfBirth" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="tPhoneNumber" />
+         </children>
+      </VBox>
+      <TableView fx:id="table" layoutX="383.0" layoutY="110.0" onMouseClicked="#getData" prefHeight="278.0" prefWidth="510.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="120.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="38.399961829185486" text="Id" />
+          <TableColumn fx:id="colName" prefWidth="191.99997329711914" text="Name" />
+            <TableColumn fx:id="colDateOfBirth" prefWidth="87.99992370605469" text="Date Of Birth" />
+            <TableColumn fx:id="colPhoneNumber" prefWidth="228.800048828125" text="Phone Number" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="354.0" layoutY="14.0" prefHeight="22.0" prefWidth="182.0" text="USER MANAGEMENT">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="213.0" layoutY="436.0" prefHeight="40.0" prefWidth="367.0">
+        <buttons>
+          <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveStudent" text="Save" />
+            <Button fx:id="btnUpdate" layoutX="297.0" layoutY="17.0" mnemonicParsing="false" onAction="#updateStudent" text="Update" />
+            <Button fx:id="btnDelete" layoutX="212.0" layoutY="17.0" mnemonicParsing="false" onAction="#deleteStudent" text="Delete" />
+            <Button fx:id="btnShow" layoutX="126.0" layoutY="17.0" mnemonicParsing="false" onAction="#showStudent" text="Show" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
